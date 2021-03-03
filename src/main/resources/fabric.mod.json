@@ -18,9 +18,9 @@
 
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "moe.kawaaii.SuicidePotion.SuicidePotion"
-    ]
+    "main": [ "moe.kawaaii.SuicidePotion.SuicidePotion" ],
+    "client": [ "moe.kawaaii.SuicidePotion.SuicidePotionClient" ],
+    "server": [ "moe.kawaaii.SuicidePotion.SuicidePotionServer" ]
   },
   "mixins": [
     "modid.mixins.json"

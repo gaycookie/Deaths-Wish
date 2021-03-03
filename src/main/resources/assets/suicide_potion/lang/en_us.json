@@ -1,4 +1,5 @@
 {
+  "death.announcement": "%s took the easy way out!",
   "item.suicide_potion.suicide_potion": "§4Suicide Potion",
   "item.suicide_potion.suicide_potion.tooltip": "Take the easy way out!"
 }
