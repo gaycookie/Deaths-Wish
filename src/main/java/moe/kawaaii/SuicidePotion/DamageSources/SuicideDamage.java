@@ -1,12 +1,12 @@
-package moe.kawaaii.SuicidePotion;
+package moe.kawaaii.SuicidePotion.DamageSources;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 
-public class Damage extends DamageSource {
-    protected Damage() {
+public class SuicideDamage extends DamageSource {
+    public SuicideDamage() {
         super("suicide");
     }
 
