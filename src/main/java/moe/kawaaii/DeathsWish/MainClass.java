@@ -2,6 +2,7 @@ package moe.kawaaii.DeathsWish;
 
 import com.swordglowsblue.artifice.api.Artifice;
 import moe.kawaaii.DeathsWish.Items.PotionOfDemise;
+import moe.kawaaii.DeathsWish.Items.ScrollOfDemise;
 import moe.kawaaii.DeathsWish.Items.TotemOfDying;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.item.Item;
@@ -14,13 +15,15 @@ public class MainClass implements ModInitializer {
 	public static final String MODID = "deaths_wish";
 	public static Item POTION_OF_DEMISE;
 	public static ToolItem TOTEM_OF_DYING;
+	public static ToolItem SCROLL_OF_DEMISE;
 	public static SimpleConfig CONFIG;
 
 	@Override
 	public void onInitialize() {
 		CONFIG = SimpleConfig.of("suicide_potion").provider(this::provider).request();
-		POTION_OF_DEMISE = new PotionOfDemise(new Item.Settings().maxCount(CONFIG.getOrDefault("stack_size", 16)).group(ItemGroup.BREWING));
-		TOTEM_OF_DYING = new TotemOfDying(new Item.Settings().maxCount(1).group(ItemGroup.COMBAT));
+		POTION_OF_DEMISE = new PotionOfDemise("potion_of_demise", CONFIG.getOrDefault("stack_size", 16), ItemGroup.BREWING);
+		TOTEM_OF_DYING = new TotemOfDying("totem_of_dying", 1, ItemGroup.COMBAT);
+		SCROLL_OF_DEMISE = new ScrollOfDemise("scroll_of_demise", 1, ItemGroup.COMBAT);
 
 		registerItems();
 		createDataPack();
@@ -41,6 +44,7 @@ public class MainClass implements ModInitializer {
 	public static void registerItems() {
 		Registry.register(Registry.ITEM, id("potion_of_demise"), POTION_OF_DEMISE);
 		Registry.register(Registry.ITEM, id("totem_of_dying"), TOTEM_OF_DYING);
+		Registry.register(Registry.ITEM, id("scroll_of_demise"), SCROLL_OF_DEMISE);
 	}
 
 	/**
@@ -55,6 +59,10 @@ public class MainClass implements ModInitializer {
 			pack.addItemModel(Registry.ITEM.getId(TOTEM_OF_DYING), model -> {
 				model.parent(new Identifier("minecraft:item/generated"));
 				model.texture("layer0", id("item/totem_of_dying"));
+			});
+			pack.addItemModel(Registry.ITEM.getId(SCROLL_OF_DEMISE), model -> {
+				model.parent(new Identifier("minecraft:item/generated"));
+				model.texture("layer0", id("item/scroll_of_demise"));
 			});
 		});
 	}
@@ -72,10 +80,17 @@ public class MainClass implements ModInitializer {
 				processor.result(Registry.ITEM.getId(POTION_OF_DEMISE), 1);
 			});
 			pack.addShapedRecipe(id("totem_of_dying_recipe"), processor -> {
-				processor.pattern("SSS", "SWS", "SSS");
+				processor.pattern("SSS", "STS", "SSS");
 				processor.ingredientItem('S', new Identifier("minecraft", "fermented_spider_eye"));
-				processor.ingredientItem('W', new Identifier("minecraft", "totem_of_undying"));
+				processor.ingredientItem('T', new Identifier("minecraft", "totem_of_undying"));
 				processor.result(Registry.ITEM.getId(TOTEM_OF_DYING), 1);
+			});
+			pack.addShapedRecipe(id("scroll_of_demise_recipe"), processor -> {
+				processor.pattern("ESE", "PPP", "ESE");
+				processor.ingredientItem('E', new Identifier("minecraft", "fermented_spider_eye"));
+				processor.ingredientItem('P', new Identifier("minecraft", "paper"));
+				processor.ingredientItem('S', new Identifier("minecraft", "stick"));
+				processor.result(Registry.ITEM.getId(SCROLL_OF_DEMISE), 1);
 			});
 		});
 	}

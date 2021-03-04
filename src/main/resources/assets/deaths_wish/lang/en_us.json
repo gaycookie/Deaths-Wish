@@ -2,6 +2,8 @@
   "death.announcement": "%s took the easy way out!",
   "item.deaths_wish.potion_of_demise": "§4Potion of Demise",
   "item.deaths_wish.totem_of_dying": "§4Totem of Dying",
+  "item.deaths_wish.scroll_of_demise": "§4Scroll of Demise",
   "item.deaths_wish.potion_of_demise.tooltip": "Take the easy way out!",
-  "item.deaths_wish.totem_of_dying.tooltip": "Take the easy way out!"
+  "item.deaths_wish.totem_of_dying.tooltip": "Take the easy way out!",
+  "item.deaths_wish.scroll_of_demise.tooltip": "Take the easy way out!"
 }
