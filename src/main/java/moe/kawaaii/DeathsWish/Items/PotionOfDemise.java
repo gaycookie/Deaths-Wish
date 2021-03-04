@@ -1,6 +1,6 @@
-package moe.kawaaii.SuicidePotion.Items;
+package moe.kawaaii.DeathsWish.Items;
 
-import moe.kawaaii.SuicidePotion.DamageSources.SuicideDamage;
+import moe.kawaaii.DeathsWish.DamageSources.SuicideDamage;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -21,8 +21,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class SuicidePotion extends Item {
-    public SuicidePotion(Settings settings) {
+public class PotionOfDemise extends Item {
+    public PotionOfDemise(Settings settings) {
         super(settings);
     }
 
@@ -46,7 +46,7 @@ public class SuicidePotion extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(new TranslatableText("item.suicide_potion.suicide_potion.tooltip"));
+        tooltip.add(new TranslatableText("item.deaths_wish.potion_of_demise.tooltip"));
     }
 
     @Override

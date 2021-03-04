@@ -1,7 +1,8 @@
-package moe.kawaaii.SuicidePotion;
+package moe.kawaaii.DeathsWish;
 
 import com.swordglowsblue.artifice.api.Artifice;
-import moe.kawaaii.SuicidePotion.Items.TotemOfDying;
+import moe.kawaaii.DeathsWish.Items.PotionOfDemise;
+import moe.kawaaii.DeathsWish.Items.TotemOfDying;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -9,19 +10,20 @@ import net.minecraft.item.ToolItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class SuicidePotion implements ModInitializer {
-	public static final String MODID = "suicide_potion";
-	public static Item SUICIDE_POTION;
+public class MainClass implements ModInitializer {
+	public static final String MODID = "deaths_wish";
+	public static Item POTION_OF_DEMISE;
 	public static ToolItem TOTEM_OF_DYING;
-	//public static Enchantment KEEP_INVENTORY;
 	public static SimpleConfig CONFIG;
 
 	@Override
 	public void onInitialize() {
 		CONFIG = SimpleConfig.of("suicide_potion").provider(this::provider).request();
-		SUICIDE_POTION = new moe.kawaaii.SuicidePotion.Items.SuicidePotion(new Item.Settings().maxCount(CONFIG.getOrDefault("stack_size", 16)).group(ItemGroup.BREWING));
+		POTION_OF_DEMISE = new PotionOfDemise(new Item.Settings().maxCount(CONFIG.getOrDefault("stack_size", 16)).group(ItemGroup.BREWING));
 		TOTEM_OF_DYING = new TotemOfDying(new Item.Settings().maxCount(1).group(ItemGroup.COMBAT));
-		//KEEP_INVENTORY = new KeepInventory(Enchantment.Rarity.VERY_RARE, EnchantmentTarget., EquipmentSlot.MAINHAND);
+
+		registerItems();
+		createDataPack();
 	}
 
 	/**
@@ -37,7 +39,7 @@ public class SuicidePotion implements ModInitializer {
 	 * Registers the items to the Registry.
 	 */
 	public static void registerItems() {
-		Registry.register(Registry.ITEM, id("suicide_potion"), SUICIDE_POTION);
+		Registry.register(Registry.ITEM, id("potion_of_demise"), POTION_OF_DEMISE);
 		Registry.register(Registry.ITEM, id("totem_of_dying"), TOTEM_OF_DYING);
 	}
 
@@ -45,14 +47,14 @@ public class SuicidePotion implements ModInitializer {
 	 * Creates and registers the Asset pack associated with this mod.
 	 */
 	public static void createAssetPack() {
-		Artifice.registerAssetPack(id("suicide_potion_asset"), pack -> {
+		Artifice.registerAssetPack(id("deaths_wish_assetpack"), pack -> {
+			pack.addItemModel(Registry.ITEM.getId(POTION_OF_DEMISE), model -> {
+				model.parent(new Identifier("minecraft:item/generated"));
+				model.texture("layer0", id("item/potion_of_demise"));
+			});
 			pack.addItemModel(Registry.ITEM.getId(TOTEM_OF_DYING), model -> {
 				model.parent(new Identifier("minecraft:item/generated"));
 				model.texture("layer0", id("item/totem_of_dying"));
-			});
-			pack.addItemModel(Registry.ITEM.getId(SUICIDE_POTION), model -> {
-				model.parent(new Identifier("minecraft:item/generated"));
-				model.texture("layer0", id("item/potion"));
 			});
 		});
 	}
@@ -61,13 +63,19 @@ public class SuicidePotion implements ModInitializer {
 	 * Creates and registers the Data pack associated with this mod.
 	 */
 	public static void createDataPack() {
-		Artifice.registerDataPack(new Identifier(MODID, "suicide_potion_data"), pack -> {
-			pack.addShapedRecipe(id("suicide_potion_recipe"), processor -> {
+		Artifice.registerDataPack(new Identifier(MODID, "deaths_wish_datapack"), pack -> {
+			pack.addShapedRecipe(id("potion_of_demise_recipe"), processor -> {
 				processor.pattern("SSS", "SWS", "SBS");
 				processor.ingredientItem('S', new Identifier("minecraft", "fermented_spider_eye"));
 				processor.ingredientItem('W', new Identifier("minecraft", "water_bucket"));
 				processor.ingredientItem('B', new Identifier("minecraft", "glass_bottle"));
-				processor.result(Registry.ITEM.getId(SUICIDE_POTION), 1);
+				processor.result(Registry.ITEM.getId(POTION_OF_DEMISE), 1);
+			});
+			pack.addShapedRecipe(id("totem_of_dying_recipe"), processor -> {
+				processor.pattern("SSS", "SWS", "SSS");
+				processor.ingredientItem('S', new Identifier("minecraft", "fermented_spider_eye"));
+				processor.ingredientItem('W', new Identifier("minecraft", "totem_of_undying"));
+				processor.result(Registry.ITEM.getId(TOTEM_OF_DYING), 1);
 			});
 		});
 	}

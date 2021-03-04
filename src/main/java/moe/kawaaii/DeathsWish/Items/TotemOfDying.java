@@ -1,6 +1,7 @@
-package moe.kawaaii.SuicidePotion.Items;
+package moe.kawaaii.DeathsWish.Items;
 
-import moe.kawaaii.SuicidePotion.DamageSources.SuicideDamage;
+import moe.kawaaii.DeathsWish.DamageSources.SuicideDamage;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
@@ -9,10 +10,15 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 class TotemMaterial implements ToolMaterial {
     @Override
@@ -47,7 +53,6 @@ class TotemMaterial implements ToolMaterial {
 }
 
 public class TotemOfDying extends ToolItem {
-
     public TotemOfDying(Settings settings) {
         super(new TotemMaterial(), settings);
     }
@@ -65,6 +70,11 @@ public class TotemOfDying extends ToolItem {
     @Override
     public int getMaxUseTime(ItemStack stack) {
         return 32;
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        tooltip.add(new TranslatableText("item.deaths_wish.totem_of_dying.tooltip"));
     }
 
     @Override
@@ -87,17 +97,14 @@ public class TotemOfDying extends ToolItem {
 
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-
         if (!world.isClient()) {
             ((ServerWorld) world).spawnParticles(ParticleTypes.EXPLOSION, user.getX(), user.getY(), user.getZ(), 25, 0, 0, 0, 0.1);
             if (!world.isClient) world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_GENERIC_EXPLODE, SoundCategory.AMBIENT, 1.0f, 1f);
         }
-
         if (!((PlayerEntity) user).isCreative()) {
             stack.decrement(1);
             user.damage(new SuicideDamage(), Float.MAX_VALUE);
         }
-
         return super.finishUsing(stack, world, user);
     }
 }

@@ -1,26 +1,26 @@
 {
   "schemaVersion": 1,
-  "id": "suicide_potion",
+  "id": "deaths_wish",
   "version": "${version}",
 
-  "name": "Suicide Potion",
-  "description": "This is an example description!",
+  "name": "Death's Wish",
+  "description": "Many items related to demise in Minecraft.",
   "authors": [
     "Me!"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/gaycookie/Suicide-Potion"
+    "sources": "https://github.com/gaycookie/Deaths-Wish"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/suicide_potion/icon.png",
+  "icon": "assets/deaths_wish/icon.png",
 
   "environment": "*",
   "entrypoints": {
-    "main": [ "moe.kawaaii.SuicidePotion.SuicidePotion" ],
-    "client": [ "moe.kawaaii.SuicidePotion.SuicidePotionClient" ],
-    "server": [ "moe.kawaaii.SuicidePotion.SuicidePotionServer" ]
+    "main": [ "moe.kawaaii.DeathsWish.MainClass" ],
+    "client": [ "moe.kawaaii.DeathsWish.ClientClass" ],
+    "server": [ "moe.kawaaii.DeathsWish.ServerClass" ]
   },
   "mixins": [
     "modid.mixins.json"

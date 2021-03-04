@@ -1,4 +1,4 @@
-package moe.kawaaii.SuicidePotion.DamageSources;
+package moe.kawaaii.DeathsWish.DamageSources;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;

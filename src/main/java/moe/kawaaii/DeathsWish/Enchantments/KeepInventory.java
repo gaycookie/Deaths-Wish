@@ -1,4 +1,4 @@
-package moe.kawaaii.SuicidePotion.Enchantments;
+package moe.kawaaii.DeathsWish.Enchantments;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;

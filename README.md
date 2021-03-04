@@ -1,9 +1,10 @@
-# Fabric Example Mod
+# Death's Wish
+A package with items to like.. yea.. help you demise!
 
-## Setup
+## Contributors
+### Translations
+- English by myself
+- Dutch by myself
+- German by [Apace100](https://github.com/apace100)
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+### More information will follow soon!

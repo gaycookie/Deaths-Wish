@@ -1,4 +1,4 @@
-package moe.kawaaii.SuicidePotion.mixin;
+package moe.kawaaii.DeathsWish.mixin;
 
 import net.minecraft.client.gui.screen.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;

@@ -1,0 +1,7 @@
+{
+  "death.announcement": "%s hat den einfachen Ausweg genommen!",
+  "item.deaths_wish.potion_of_demise": "§4Ablebenstrank",
+  "item.deaths_wish.totem_of_dying": "§4Totem der Sterblichkeit",
+  "item.deaths_wish.potion_of_demise.tooltip": "Nimm den einfachen Ausweg!",
+  "item.deaths_wish.totem_of_dying.tooltip": "Nimm den einfachen Ausweg!"
+}

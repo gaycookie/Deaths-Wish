@@ -1,4 +1,4 @@
-package moe.kawaaii.SuicidePotion;
+package moe.kawaaii.DeathsWish;
 
 /*
  * Copyright (c) 2021 magistermaks
