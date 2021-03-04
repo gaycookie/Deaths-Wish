@@ -1,7 +1,10 @@
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/gaycookie/deaths-wish/build?label=Actions&style=for-the-badge)](https://github.com/gaycookie/Deaths-Wish/actions/workflows/build.yml)
 ‎‎ [![GitHub release (latest by date)](https://img.shields.io/github/v/release/gaycookie/deaths-wish?label=Latest%20Release&style=for-the-badge)](https://github.com/gaycookie/Deaths-Wish/releases/latest)
 ‎‎ [![GitHub all releases](https://img.shields.io/github/downloads/gaycookie/deaths-wish/total?label=Downloads&style=for-the-badge)](https://github.com/gaycookie/Deaths-Wish/releases/latest)
-‎‎ [![Documentation](https://img.shields.io/badge/Documentation-GitHub-orange?style=for-the-badge)](https://github.com/gaycookie/Deaths-Wish/wiki)
+‎‎ [![Documentation](https://img.shields.io/badge/Documentation-GitHub-orange?style=for-the-badge)](https://github.com/gaycookie/Deaths-Wish/wiki)  
+[![Discord](https://img.shields.io/discord/817130660527079515?label=Discord%20Guild&style=for-the-badge&logo=discord&logoColor=ffffff)](https://discord.gg/qUbJye86UN)
+<!--‎‎ [![CurseForge Downloads](http://cf.way2muchnoise.eu/full_XXXXXX_downloads.svg?badge_style=for_the_badge)]()
+‎‎ [![Available For](http://cf.way2muchnoise.eu/versions/XXXXXX.svg?badge_style=for_the_badge)]()-->
 
 # Death's Wish
 A package with items to like.. yea.. help you demise!  
