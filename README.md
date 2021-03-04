@@ -13,5 +13,6 @@ The entire changelog can be viewed on this [page](CHANGELOG.md)
 - English by myself
 - Dutch by myself
 - German by [Apace100](https://github.com/apace100)
+- Polish by [MrRubberDucky](https://github.com/MrRubberDucky)
 
 ### More information will follow soon!
