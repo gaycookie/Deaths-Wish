@@ -1,6 +1,7 @@
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/gaycookie/deaths-wish/build?label=GitHub%20Actions&style=for-the-badge)
-‎‎ ![GitHub release (latest by date)](https://img.shields.io/github/v/release/gaycookie/deaths-wish?label=Latest%20Release&style=for-the-badge)
-‎‎ ![GitHub all releases](https://img.shields.io/github/downloads/gaycookie/deaths-wish/total?label=GitHub%20Downloads&style=for-the-badge)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/gaycookie/deaths-wish/build?label=Actions&style=for-the-badge)](https://github.com/gaycookie/Deaths-Wish/actions/workflows/build.yml)
+‎‎ [![GitHub release (latest by date)](https://img.shields.io/github/v/release/gaycookie/deaths-wish?label=Latest%20Release&style=for-the-badge)](https://github.com/gaycookie/Deaths-Wish/releases/latest)
+‎‎ [![GitHub all releases](https://img.shields.io/github/downloads/gaycookie/deaths-wish/total?label=Downloads&style=for-the-badge)](https://github.com/gaycookie/Deaths-Wish/releases/latest)
+‎‎ [![Documentation](https://img.shields.io/badge/Documentation-GitHub-orange?style=for-the-badge)](https://github.com/gaycookie/Deaths-Wish/wiki)
 
 # Death's Wish
 A package with items to like.. yea.. help you demise!  
