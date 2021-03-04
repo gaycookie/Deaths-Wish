@@ -1,0 +1,9 @@
+{
+  "death.announcement": "%s wybrał łatwe wyjście!",
+  "item.deaths_wish.potion_of_demise": "§4Eliksir Śmierci",
+  "item.deaths_wish.totem_of_dying": "§4Totem Śmiertelności",
+  "item.deaths_wish.scroll_of_demise": "§4Zwój Zgonu",
+  "item.deaths_wish.potion_of_demise.tooltip": "Wybierz łatwe wyjście!",
+  "item.deaths_wish.totem_of_dying.tooltip": "Wybierz łatwe wyjście!",
+  "item.deaths_wish.scroll_of_demise.tooltip": "Wybierz łatwe wyjście!"
+}
