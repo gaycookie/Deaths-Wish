@@ -24,9 +24,14 @@ The entire changelog can be viewed on this [page](CHANGELOG.md)
 
 ## Contributors
 ### Translations
-- English by myself
-- Dutch by myself
-- German by [Apace100](https://github.com/apace100)
-- Polish by [MrRubberDucky](https://github.com/MrRubberDucky)
+- English by myself (v1.2.0)
+- Dutch by myself (v1.2.0)
+- German by [Apace100](https://github.com/apace100) (v1.1.0)
+- Polish by [MrRubberDucky](https://github.com/MrRubberDucky) (v1.1.0)
+
+The versions behind will tell you when the translation file was updated.  
+If you wanna contribute to the translations, you can always do a nice little PR!
+
+---
 
 #### More information will follow soon!

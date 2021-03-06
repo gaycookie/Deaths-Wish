@@ -23,9 +23,8 @@
     "server": [ "moe.kawaaii.DeathsWish.ServerClass" ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "deaths_wish.mixins.json"
   ],
-
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",

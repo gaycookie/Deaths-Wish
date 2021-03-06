@@ -1,6 +1,7 @@
 package moe.kawaaii.DeathsWish;
 
 import com.swordglowsblue.artifice.api.Artifice;
+import moe.kawaaii.DeathsWish.Items.BlockOfUndying;
 import moe.kawaaii.DeathsWish.Items.PotionOfDemise;
 import moe.kawaaii.DeathsWish.Items.ScrollOfDemise;
 import moe.kawaaii.DeathsWish.Items.TotemOfDying;
@@ -16,6 +17,7 @@ public class MainClass implements ModInitializer {
 	public static Item POTION_OF_DEMISE;
 	public static ToolItem TOTEM_OF_DYING;
 	public static ToolItem SCROLL_OF_DEMISE;
+	public static ToolItem BLOCK_OF_UNDYING;
 	public static SimpleConfig CONFIG;
 
 	@Override
@@ -24,6 +26,7 @@ public class MainClass implements ModInitializer {
 		POTION_OF_DEMISE = new PotionOfDemise("potion_of_demise", CONFIG.getOrDefault("stack_size", 16), ItemGroup.BREWING);
 		TOTEM_OF_DYING = new TotemOfDying("totem_of_dying", 1, ItemGroup.COMBAT);
 		SCROLL_OF_DEMISE = new ScrollOfDemise("scroll_of_demise", 1, ItemGroup.COMBAT);
+		BLOCK_OF_UNDYING = new BlockOfUndying("block_of_undying", 1, ItemGroup.COMBAT);
 
 		registerItems();
 		createDataPack();
@@ -45,6 +48,7 @@ public class MainClass implements ModInitializer {
 		Registry.register(Registry.ITEM, id("potion_of_demise"), POTION_OF_DEMISE);
 		Registry.register(Registry.ITEM, id("totem_of_dying"), TOTEM_OF_DYING);
 		Registry.register(Registry.ITEM, id("scroll_of_demise"), SCROLL_OF_DEMISE);
+		Registry.register(Registry.ITEM, id("block_of_undying"), BLOCK_OF_UNDYING);
 	}
 
 	/**
@@ -63,6 +67,10 @@ public class MainClass implements ModInitializer {
 			pack.addItemModel(Registry.ITEM.getId(SCROLL_OF_DEMISE), model -> {
 				model.parent(new Identifier("minecraft:item/generated"));
 				model.texture("layer0", id("item/scroll_of_demise"));
+			});
+			pack.addItemModel(Registry.ITEM.getId(BLOCK_OF_UNDYING), model -> {
+				model.parent(new Identifier("minecraft:block/cube_all"));
+				model.texture("all", id("item/block_of_undying"));
 			});
 		});
 	}
@@ -91,6 +99,11 @@ public class MainClass implements ModInitializer {
 				processor.ingredientItem('P', new Identifier("minecraft", "paper"));
 				processor.ingredientItem('S', new Identifier("minecraft", "stick"));
 				processor.result(Registry.ITEM.getId(SCROLL_OF_DEMISE), 1);
+			});
+			pack.addShapedRecipe(id("block_of_undying_recipe"), processor -> {
+				processor.pattern("TTT", "TTT", "TTT");
+				processor.ingredientItem('T', new Identifier("minecraft", "totem_of_undying"));
+				processor.result(Registry.ITEM.getId(BLOCK_OF_UNDYING), 1);
 			});
 		});
 	}
