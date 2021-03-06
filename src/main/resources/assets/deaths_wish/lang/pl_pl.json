@@ -3,7 +3,10 @@
   "item.deaths_wish.potion_of_demise": "§4Eliksir Śmierci",
   "item.deaths_wish.totem_of_dying": "§4Totem Śmiertelności",
   "item.deaths_wish.scroll_of_demise": "§4Zwój Zgonu",
+  "item.deaths_wish.block_of_undying": "§eBlok Nieśmiertelności",
   "item.deaths_wish.potion_of_demise.tooltip": "Wybierz łatwe wyjście!",
   "item.deaths_wish.totem_of_dying.tooltip": "Wybierz łatwe wyjście!",
-  "item.deaths_wish.scroll_of_demise.tooltip": "Wybierz łatwe wyjście!"
+  "item.deaths_wish.scroll_of_demise.tooltip": "Wybierz łatwe wyjście!",
+  "item.deaths_wish.block_of_undying.tooltip": "Oszukiwanie śmierci nigdy nie było tak proste.",
+  "item.deaths_wish.block_of_undying.tooltip2": "§6Pozostało naładowań:§r §e%s§r"
 }
