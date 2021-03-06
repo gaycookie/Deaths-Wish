@@ -3,8 +3,8 @@
 ‎‎ [![GitHub all releases](https://img.shields.io/github/downloads/gaycookie/deaths-wish/total?label=Downloads&style=for-the-badge)](https://github.com/gaycookie/Deaths-Wish/releases/latest)
 ‎‎ [![Documentation](https://img.shields.io/badge/Documentation-GitHub-orange?style=for-the-badge)](https://github.com/gaycookie/Deaths-Wish/wiki)  
 [![Discord](https://img.shields.io/discord/817130660527079515?label=Discord%20Guild&style=for-the-badge&logo=discord&logoColor=ffffff)](https://discord.gg/qUbJye86UN)
-<!--‎‎ [![CurseForge Downloads](http://cf.way2muchnoise.eu/full_XXXXXX_downloads.svg?badge_style=for_the_badge)]()
-‎‎ [![Available For](http://cf.way2muchnoise.eu/versions/XXXXXX.svg?badge_style=for_the_badge)]()-->
+‎‎ [![CurseForge Downloads](http://cf.way2muchnoise.eu/full_453778_downloads.svg?badge_style=for_the_badge)](https://www.curseforge.com/minecraft/mc-mods/deaths-wish-fabric)
+‎‎ [![Available For](http://cf.way2muchnoise.eu/versions/453778.svg?badge_style=for_the_badge)](https://www.curseforge.com/minecraft/mc-mods/deaths-wish-fabric)
 
 # Death's Wish
 A package with items to like.. yea.. help you demise!  
