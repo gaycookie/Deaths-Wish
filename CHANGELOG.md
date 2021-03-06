@@ -1,6 +1,7 @@
 ## Changelog
 ### 1.2.0 (Latest)
 #### Added
+- French language
 - Block of Undying (still in beta)  
 
 **Block of Undying** is a item that hold 9 charges of Totem of Undying.  
