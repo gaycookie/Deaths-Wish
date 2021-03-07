@@ -1,6 +1,7 @@
 package moe.kawaaii.DeathsWish;
 
 import com.swordglowsblue.artifice.api.Artifice;
+import moe.kawaaii.DeathsWish.DamageSources.SuicideDamage;
 import moe.kawaaii.DeathsWish.Enchantments.KeepInventory;
 import moe.kawaaii.DeathsWish.Enchantments.SoulAbsorb;
 import moe.kawaaii.DeathsWish.Items.BlockOfUndying;
@@ -11,6 +12,7 @@ import net.fabricmc.api.ModInitializer;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ToolItem;
@@ -31,6 +33,9 @@ public class MainClass implements ModInitializer {
 	public static Enchantment KEEP_INVENTORY;
 	public static Enchantment SOUL_ABSORB;
 
+	/* Damage Source */
+	public static DamageSource DAMAGE_SOURCE;
+
 	@Override
 	public void onInitialize() {
 		CONFIG = SimpleConfig.of("deaths_wish").provider(this::provider).request();
@@ -41,6 +46,8 @@ public class MainClass implements ModInitializer {
 
 		KEEP_INVENTORY = new KeepInventory(Enchantment.Rarity.RARE, EnchantmentTarget.BREAKABLE, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
 		SOUL_ABSORB = new SoulAbsorb(Enchantment.Rarity.RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+
+		DAMAGE_SOURCE = new SuicideDamage();
 
 		registerItems();
 		createDataPack();

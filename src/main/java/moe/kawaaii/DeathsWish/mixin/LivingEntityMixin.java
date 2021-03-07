@@ -27,7 +27,7 @@ import java.util.Random;
 public abstract class LivingEntityMixin {
 
     @Inject(at = @At(value = "TAIL"), method = "onDeath", cancellable = true)
-    public void onDeath(DamageSource source, CallbackInfo ci) {
+    public void soulAbsorbInjection(DamageSource source, CallbackInfo ci) {
 
         LivingEntity livingEntity = ((LivingEntity) (Object) this);
         Entity attackerEntity = source.getAttacker();
