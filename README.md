@@ -42,6 +42,7 @@ The entire changelog can be viewed on this [page](CHANGELOG.md)
 - Polish by [MrRubberDucky](https://github.com/MrRubberDucky) (v1.3.3)
 - French by Fr0zka (v1.2.0)
 - German by [Apace100](https://github.com/apace100) (v1.1.0)
+- Spanish by [Chronosacaria](https://github.com/chronosacaria) (1.3.3)
 
 The versions behind will tell you when the translation file was updated.  
 If you want to contribute to the translations then check out this [page](https://github.com/gaycookie/Deaths-Wish/wiki/Contribution#language-contribution)
