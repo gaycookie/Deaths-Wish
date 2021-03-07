@@ -1,0 +1,12 @@
+{
+  "death.announcement": "¡%s eligió el camino más fácil!",
+  "item.deaths_wish.potion_of_demise": "§4Poción de muerte",
+  "item.deaths_wish.totem_of_dying": "§4Tótem de morir",
+  "item.deaths_wish.scroll_of_demise": "§4Pergamino de muerte",
+  "item.deaths_wish.block_of_undying": "§eBloque de inmortalidad",
+  "item.deaths_wish.potion_of_demise.tooltip": "¡Elige el camino más fácil!",
+  "item.deaths_wish.totem_of_dying.tooltip": "¡Elige el camino más fácil!",
+  "item.deaths_wish.scroll_of_demise.tooltip": "¡Elige el camino más fácil!",
+  "item.deaths_wish.block_of_undying.tooltip": "Engaña a la muerte nunca ha sido tan fácil.",
+  "item.deaths_wish.block_of_undying.tooltip2": "§6Cargos restantes:§r §e%s§r"
+}
