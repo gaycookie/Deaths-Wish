@@ -13,7 +13,20 @@ A package with items to like.. yea.. help you demise!
 	<a href="https://www.curseforge.com/minecraft/mc-mods/fabric-api"><img title="Requires Fabric API" height="50" src="https://i.imgur.com/Ol1Tcf8.png"></a>
 </p>
 
-<p align="center"><b>Death's Wish</b> requires <a href="https://fabricmc.net/use/">Fabric Loader</a> and <a href="https://www.curseforge.com/minecraft/mc-mods/fabric-api">Fabric API</a>.</p>
+<p align="center">
+    <b>Death's Wish</b> requires <a href="https://fabricmc.net/use/">Fabric Loader</a> and <a href="https://www.curseforge.com/minecraft/mc-mods/fabric-api">Fabric API</a>.<br />
+    Optional dependency: <a href="https://www.curseforge.com/minecraft/mc-mods/enchantment-descriptions">Enchantment Descriptions</a>
+</p>
+
+## Description
+**Death's Wish** is a package of items that are related to dying in game.  
+It adds several items to "demise yourself" such as a potion and a custom totem.  
+But it also adds items such as a Block of Undying that functions as a Totem of Undying but better.  
+
+There are also custom enchantments for those items such as "Keep Inventory"   
+that will help you keep your inventory when you demise using on the mod items.
+
+More items and features will be added over time like jewelry and other more complex ideas.
 
 ## Project Board
 The project board with To do's, Ideas and more can be found [here](https://github.com/gaycookie/Deaths-Wish/projects/1)
@@ -24,14 +37,14 @@ The entire changelog can be viewed on this [page](CHANGELOG.md)
 
 ## Contributors
 ### Translations
-- English by myself (v1.2.0)
-- Dutch by myself (v1.2.0)
-- German by [Apace100](https://github.com/apace100) (v1.1.0)
-- Polish by [MrRubberDucky](https://github.com/MrRubberDucky) (v1.1.0)
+- English by myself (v1.3.3)
+- Dutch by myself (v1.3.3)
+- Polish by [MrRubberDucky](https://github.com/MrRubberDucky) (v1.3.3)
 - French by Fr0zka (v1.2.0)
+- German by [Apace100](https://github.com/apace100) (v1.1.0)
 
 The versions behind will tell you when the translation file was updated.  
-If you wanna contribute to the translations, you can always do a nice little PR!
+If you want to contribute to the translations then check out this [page](https://github.com/gaycookie/Deaths-Wish/wiki/Contribution#language-contribution)
 
 ---
 

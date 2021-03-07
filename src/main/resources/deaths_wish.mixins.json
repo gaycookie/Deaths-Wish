@@ -4,6 +4,7 @@
   "package": "moe.kawaaii.DeathsWish.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "EnchantmentMixin",
     "LivingEntityMixin"
   ],
   "injectors": {

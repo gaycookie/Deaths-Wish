@@ -47,7 +47,7 @@ public class DemiseItem extends ToolItem {
 
             @Override
             public int getEnchantability() {
-                return 1;
+                return 0;
             }
 
             @Override

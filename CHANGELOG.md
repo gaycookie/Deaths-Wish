@@ -1,5 +1,15 @@
 ## Changelog
-### 1.2.0 (Latest)
+### 1.3.3 (latest)
+#### Added
+- Enchantments: `Keep Inventory` & `Soul Absorb`.
+- Support for [Enchantment Descriptions](https://www.curseforge.com/minecraft/mc-mods/enchantment-descriptions).  
+This way enchantments will also have information in the tooltips.
+
+#### Changes
+- New language entries for the enchantments via **Enchantment Descriptions**.  
+**Some languages can be out of date, English should be updated though.**
+
+### 1.2.0
 #### Added
 - French language
 - Block of Undying (still in beta)  
@@ -13,5 +23,5 @@ This item makes holding multiple (9) Totem's of Undying easier.
 - Scroll of Demise.
 - Recipe for Scroll of Demise.
 
-#### Changed
+#### Changes
 - Rewrote the item classes, less copy / pasting now!

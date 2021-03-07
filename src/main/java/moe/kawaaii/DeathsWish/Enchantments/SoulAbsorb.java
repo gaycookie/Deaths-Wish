@@ -4,8 +4,8 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
 
-public class KeepInventory extends Enchantment {
-    public KeepInventory(Rarity weight, EnchantmentTarget type, EquipmentSlot[] slotTypes) {
+public class SoulAbsorb extends Enchantment {
+    public SoulAbsorb(Rarity weight, EnchantmentTarget type, EquipmentSlot[] slotTypes) {
         super(weight, type, slotTypes);
     }
 
