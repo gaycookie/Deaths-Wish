@@ -1,6 +1,6 @@
-package moe.kawaaii.DeathsWish;
+package moe.kawaaii.DeathsWish.Interfaces;
 
-public interface keepInventoryInterface {
+public interface IPlayerEntity {
     void setKeepInventory(boolean value);
     boolean getKeepInventory();
 }
