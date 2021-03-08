@@ -40,7 +40,7 @@ The entire changelog can be viewed on this [page](CHANGELOG.md)
 - English by myself (v1.3.3)
 - Dutch by myself (v1.3.3)
 - Polish by [MrRubberDucky](https://github.com/MrRubberDucky) (v1.3.3)
-- French by Fr0zka (v1.2.0)
+- French by Fr0zka (v1.3.3)
 - German by [Apace100](https://github.com/apace100) (v1.1.0)
 - Spanish by [Chronosacaria](https://github.com/chronosacaria) (1.3.3)
 
