@@ -1,6 +1,7 @@
 package moe.kawaaii.DeathsWish.mixin;
 
 import moe.kawaaii.DeathsWish.Interfaces.IPlayerEntity;
+import moe.kawaaii.DeathsWish.MainClass;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.world.GameRules;
 import org.spongepowered.asm.mixin.Mixin;
@@ -21,11 +22,13 @@ public class ServerPlayerEntityMixin {
 
     @Inject(at = @At(value = "HEAD"), method = "copyFrom", cancellable = true)
     public void copyFrom(ServerPlayerEntity oldPlayer, boolean alive, CallbackInfo ci) {
-        if (!alive) {
-            if (!((ServerPlayerEntity) (Object) this).world.getGameRules().getBoolean(GameRules.KEEP_INVENTORY)) {
-                if (((IPlayerEntity) oldPlayer).getKeepInventory()) {
-                    ((ServerPlayerEntity) (Object) this).inventory.clone(oldPlayer.inventory);
-                    ((IPlayerEntity) oldPlayer).setKeepInventory(false);
+        if (MainClass.CONFIG.getOrDefault("keep_inventory_enabled", true)) {
+            if (!alive) {
+                if (!((ServerPlayerEntity) (Object) this).world.getGameRules().getBoolean(GameRules.KEEP_INVENTORY)) {
+                    if (((IPlayerEntity) oldPlayer).getKeepInventory()) {
+                        ((ServerPlayerEntity) (Object) this).inventory.clone(oldPlayer.inventory);
+                        ((IPlayerEntity) oldPlayer).setKeepInventory(false);
+                    }
                 }
             }
         }
