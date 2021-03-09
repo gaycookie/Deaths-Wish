@@ -19,15 +19,3 @@ public abstract class PlayerInventoryMixin {
         }
     }
 }
-
-/*@Mixin(PlayerEntity.class)
-public abstract class PlayerEntityMixin {
-    @Inject(at = @At(value = "HEAD"), method = "dropInventory", cancellable = true)
-    public void keepInventoryInjection(CallbackInfo ci) {
-        PlayerEntity player = ((PlayerEntity) (Object) this);
-
-        if (((keepInventoryInterface) player).getKeepInventory()) {
-            ci.cancel();
-        }
-    }
-}*/
