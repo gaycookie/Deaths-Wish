@@ -47,6 +47,7 @@ The entire changelog can be viewed on this [page](CHANGELOG.md)
 |   ✅    |     ❌    | German      | [Apace100]           | v1.1.0  |
 |   ✅    |     ✅    | Spanish     | [Chronosacaria]      | v1.3.6  |
 |   ❌    |     ✅    | Italian     | [Chronosacaria]      | v1.3.6  |
+|   ❌    |     ✅    | Mandarin    | [Chronosacaria]      | v1.3.6  |
 
 <!-- Copy Paste :: ❌ ✅ -->
 <!-- Add your own Github profile down below -->
