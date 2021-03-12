@@ -12,7 +12,6 @@ public class SuicideDamage extends DamageSource {
 
     @Override
     public Text getDeathMessage(LivingEntity entity) {
-        // Text.of(String.format(SuicidePotion.DEATH_MESSAGE, entity.getName().asString()))
         return new TranslatableText("death.announcement", entity.getName().asString());
     }
 }

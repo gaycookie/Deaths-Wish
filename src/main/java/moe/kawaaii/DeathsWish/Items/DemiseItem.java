@@ -1,7 +1,10 @@
 package moe.kawaaii.DeathsWish.Items;
 
 import moe.kawaaii.DeathsWish.DamageSources.SuicideDamage;
+import moe.kawaaii.DeathsWish.MainClass;
+import moe.kawaaii.DeathsWish.Interfaces.IPlayerEntity;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
@@ -87,15 +90,21 @@ public class DemiseItem extends ToolItem {
     @Override
     public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
         stack.setDamage(0);
+        ((IPlayerEntity) user).setKeepInventory(false);
         super.onStoppedUsing(stack, world, user, remainingUseTicks);
     }
 
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-        if (!world.isClient()) {
+        if (!world.isClient) {
             ((ServerWorld) world).spawnParticles(ParticleTypes.EXPLOSION, user.getX(), user.getY(), user.getZ(), 25, 0, 0, 0, 0.1);
             world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_GENERIC_EXPLODE, SoundCategory.AMBIENT, 1.0f, 1f);
+
+            if (EnchantmentHelper.get(stack).get(MainClass.KEEP_INVENTORY) != null) {
+                ((IPlayerEntity) user).setKeepInventory(true);
+            }
         }
+
         if (!((PlayerEntity) user).isCreative()) {
             stack.decrement(1);
             user.damage(new SuicideDamage(), Float.MAX_VALUE);

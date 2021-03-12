@@ -1,6 +1,7 @@
 package moe.kawaaii.DeathsWish;
 
 import com.swordglowsblue.artifice.api.Artifice;
+import moe.kawaaii.DeathsWish.DamageSources.SuicideDamage;
 import moe.kawaaii.DeathsWish.Enchantments.KeepInventory;
 import moe.kawaaii.DeathsWish.Enchantments.SoulAbsorb;
 import moe.kawaaii.DeathsWish.Items.BlockOfUndying;
@@ -11,6 +12,7 @@ import net.fabricmc.api.ModInitializer;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ToolItem;
@@ -31,6 +33,9 @@ public class MainClass implements ModInitializer {
 	public static Enchantment KEEP_INVENTORY;
 	public static Enchantment SOUL_ABSORB;
 
+	/* Damage Source */
+	public static DamageSource DAMAGE_SOURCE;
+
 	@Override
 	public void onInitialize() {
 		CONFIG = SimpleConfig.of("deaths_wish").provider(this::provider).request();
@@ -39,8 +44,10 @@ public class MainClass implements ModInitializer {
 		SCROLL_OF_DEMISE = new ScrollOfDemise("scroll_of_demise", 1, ItemGroup.COMBAT);
 		BLOCK_OF_UNDYING = new BlockOfUndying("block_of_undying", 1, ItemGroup.COMBAT);
 
-		KEEP_INVENTORY = new KeepInventory(Enchantment.Rarity.RARE, EnchantmentTarget.BREAKABLE, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
-		SOUL_ABSORB = new SoulAbsorb(Enchantment.Rarity.RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+		if (CONFIG.getOrDefault("keep_inventory_enabled", true)) KEEP_INVENTORY = new KeepInventory(Enchantment.Rarity.RARE, EnchantmentTarget.BREAKABLE, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
+		if (CONFIG.getOrDefault("soul_absorb_enabled", true)) SOUL_ABSORB = new SoulAbsorb(Enchantment.Rarity.RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+
+		DAMAGE_SOURCE = new SuicideDamage();
 
 		registerItems();
 		createDataPack();
@@ -58,18 +65,28 @@ public class MainClass implements ModInitializer {
 		 * # To change the default value, remove the '#' in front of the entry you wanna change.
 		 *
 		 * ## Max stack size of the Potion of Demise
-		 * potion_of_demise_stack_size=16
+		 * #potion_of_demise_stack_size=16
+		 *
+		 * ## Enable/Disable Soul Absorb enchantment.
+		 * #soul_absorb_enabled=true
 		 *
 		 * ## How often the Soul Absorber would get triggered in percentages.
-		 * soul_absorber_chance=5
+		 * #soul_absorber_chance=5
+		 *
+		 * ## Enable/Disable Keep Inventory enchantment.
+		 * #keep_inventory_enabled=true
 		 */
 
 		return "### Death's Wish Config (1.3.3)\n" +
 		"# To change the default value, remove the '#' in front of the entry you wanna change.\n\n" +
 		"## Max stack size of the Potion of Demise.\n" +
 		"#potion_of_demise_stack_size=16\n\n" +
+		"## Enable/Disable Soul Absorb enchantment.\n" +
+		"#soul_absorb_enabled=true\n\n" +
 		"## How often the Soul Absorber would get triggered in percentages.\n" +
-		"#soul_absorber_chance=5";
+		"#soul_absorber_chance=5\n\n" +
+		"## Enable/Disable Keep Inventory enchantment.\n" +
+		"#keep_inventory_enabled=true";
 	}
 
 	/**
@@ -81,8 +98,8 @@ public class MainClass implements ModInitializer {
 		Registry.register(Registry.ITEM, id("scroll_of_demise"), SCROLL_OF_DEMISE);
 		Registry.register(Registry.ITEM, id("block_of_undying"), BLOCK_OF_UNDYING);
 
-		Registry.register(Registry.ENCHANTMENT, id("keep_inventory"), KEEP_INVENTORY);
-		Registry.register(Registry.ENCHANTMENT, id("soul_absorb"), SOUL_ABSORB);
+		if (CONFIG.getOrDefault("keep_inventory_enabled", true)) Registry.register(Registry.ENCHANTMENT, id("keep_inventory"), KEEP_INVENTORY);
+		if (CONFIG.getOrDefault("soul_absorb_enabled", true)) Registry.register(Registry.ENCHANTMENT, id("soul_absorb"), SOUL_ABSORB);
 	}
 
 	/**

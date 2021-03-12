@@ -1,4 +1,16 @@
 ## Changelog
+### 1.3.6 (latest)
+#### Added
+- Functionalities to `Keep Inventory` enchantment.
+- More configuration options.  
+*Make sure to delete your old config file when you update the mod*
+
+#### Changes
+- Enchantments can be disabled now via the configuration.
+
+#### Fixed
+- Issue where armor was not being copied over when dying with the Totem of Dying with the Keep Inventory enchantment.
+
 ### 1.3.3 (latest)
 #### Added
 - Enchantments: `Keep Inventory` & `Soul Absorb`.
@@ -14,7 +26,7 @@ This way enchantments will also have information in the tooltips.
 - French language
 - Block of Undying (still in beta)  
 
-**Block of Undying** is a item that hold 9 charges of Totem of Undying.  
+**Block of Undying** is an item that hold 9 charges of Totem of Undying.  
 This item makes holding multiple (9) Totem's of Undying easier.  
 **This item is still in beta until I know for sure it can not cause conflicts.**
 

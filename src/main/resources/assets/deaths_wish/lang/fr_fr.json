@@ -3,10 +3,14 @@
   "item.deaths_wish.potion_of_demise": "§4Potion de Trépat",
   "item.deaths_wish.totem_of_dying": "§4Totem de la Mort",
   "item.deaths_wish.scroll_of_demise": "§4Parchemin du Trépat",
-  "item.deaths_wish.block_of_undying": "§eBlock d'Invulnérabilité",
+  "item.deaths_wish.block_of_undying": "§eBloc d'Invulnérabilité",
   "item.deaths_wish.potion_of_demise.tooltip": "Choisissez la voie de la facilité!",
   "item.deaths_wish.totem_of_dying.tooltip": "Choisissez la voie de la facilité!",
   "item.deaths_wish.scroll_of_demise.tooltip": "Choisissez la voie de la facilité !",
   "item.deaths_wish.block_of_undying.tooltip": "Tromper la mort n'aura jamais était aussi simple.",
-  "item.deaths_wish.block_of_undying.tooltip2": "§6Charges restantes:§r §e%s§r"
+  "item.deaths_wish.block_of_undying.tooltip2": "§6Charges restantes:§r §e%s§r",
+  "enchantment.deaths_wish.keep_inventory": "Protection de l'Inventaire",
+  "enchantment.deaths_wish.keep_inventory.desc": "Garder votre inventaire lorsque vous trépassez en utilisant cet objet.",
+  "enchantment.deaths_wish.soul_absorb": "Absorption d'Âme",
+  "enchantment.deaths_wish.soul_absorb.desc": "Vous avez une chance de charger votre Block D'Invulnérabilité quand vous tuez un ennemie."
 }
