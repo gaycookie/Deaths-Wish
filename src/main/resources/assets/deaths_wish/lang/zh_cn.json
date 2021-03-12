@@ -1,0 +1,16 @@
+{
+    "death.announcement": "¡%s选择了最简单的方法！",
+    "item.deaths_wish.potion_of_demise": "§4死亡药水",
+    "item.deaths_wish.totem_of_dying": "§4死图腾",
+    "item.deaths_wish.scroll_of_demise": "§4死亡卷轴",
+    "item.deaths_wish.block_of_undying": "§e不死图腾方块",
+    "enchantment.deaths_wish.keep_inventory": "保持库存",
+    "enchantment.deaths_wish.keep_inventory.desc": "当您死于使用此物品时，您将保留库存。",
+    "enchantment.deaths_wish.soul_absorb": "灵魂的吸收",
+    "enchantment.deaths_wish.soul_absorb.desc": "杀死敌人时有能力荷不死图腾方块。",
+    "item.deaths_wish.potion_of_demise.tooltip": "选择最简单的方法！",
+    "item.deaths_wish.totem_of_dying.tooltip": "选择最简单的方法！",
+    "item.deaths_wish.scroll_of_demise.tooltip": "选择最简单的方法！",
+    "item.deaths_wish.block_of_undying.tooltip": "死亡作弊从未如此简单。",
+    "item.deaths_wish.block_of_undying.tooltip2": "§6剩余荷:§r §e%s§r"
+}
