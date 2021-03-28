@@ -21,6 +21,7 @@ import net.minecraft.util.registry.Registry;
 
 public class MainClass implements ModInitializer {
 	public static final String MODID = "deaths_wish";
+	public static final DamageSource DAMAGE_SOURCE = new SuicideDamage();
 	public static SimpleConfig CONFIG;
 
 	/* Items */
@@ -33,9 +34,6 @@ public class MainClass implements ModInitializer {
 	public static Enchantment KEEP_INVENTORY;
 	public static Enchantment SOUL_ABSORB;
 
-	/* Damage Source */
-	public static DamageSource DAMAGE_SOURCE;
-
 	@Override
 	public void onInitialize() {
 		CONFIG = SimpleConfig.of("deaths_wish").provider(this::provider).request();
@@ -46,8 +44,6 @@ public class MainClass implements ModInitializer {
 
 		if (CONFIG.getOrDefault("keep_inventory_enabled", true)) KEEP_INVENTORY = new KeepInventory(Enchantment.Rarity.RARE, EnchantmentTarget.BREAKABLE, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
 		if (CONFIG.getOrDefault("soul_absorb_enabled", true)) SOUL_ABSORB = new SoulAbsorb(Enchantment.Rarity.RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
-
-		DAMAGE_SOURCE = new SuicideDamage();
 
 		registerItems();
 		createDataPack();

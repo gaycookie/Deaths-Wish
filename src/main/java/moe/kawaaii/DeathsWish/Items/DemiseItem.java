@@ -107,7 +107,8 @@ public class DemiseItem extends ToolItem {
 
         if (!((PlayerEntity) user).isCreative()) {
             stack.decrement(1);
-            user.damage(new SuicideDamage(), Float.MAX_VALUE);
+            // user.damage(new SuicideDamage(), Float.MAX_VALUE);
+            user.damage(MainClass.DAMAGE_SOURCE, Float.MAX_VALUE);
         }
         return super.finishUsing(stack, world, user);
     }
