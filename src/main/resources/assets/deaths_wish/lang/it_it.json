@@ -1,0 +1,16 @@
+{
+    "death.announcement": "¡%s scelse il modo più semplice!",
+    "item.deaths_wish.potion_of_demise": "§4Pozione di morte",
+    "item.deaths_wish.totem_of_dying": "§4Totem morente",
+    "item.deaths_wish.scroll_of_demise": "§4Pergamena della morte",
+    "item.deaths_wish.block_of_undying": "§eBlocco dell'immortalità",
+    "enchantment.deaths_wish.keep_inventory": "Tenere l'inventario",
+    "enchantment.deaths_wish.keep_inventory.desc": "Manterrai l'inventario quando morirai usando questo oggetto.",
+    "enchantment.deaths_wish.soul_absorb": "Assorbimento dell'anima",
+    "enchantment.deaths_wish.soul_absorb.desc": "Ha la possibilità di caricare il blocco dell'immortalità quando si uccidono i nemici.",
+    "item.deaths_wish.potion_of_demise.tooltip": "Scegli il modo più semplice!",
+    "item.deaths_wish.totem_of_dying.tooltip": "Scegli il modo più semplice!",
+    "item.deaths_wish.scroll_of_demise.tooltip": "Scegli il modo più semplice!",
+    "item.deaths_wish.block_of_undying.tooltip": "Imbrogliare la morte non è mai stato così facile.",
+    "item.deaths_wish.block_of_undying.tooltip2": "§6Carichi rimanenti:§r §e%s§r"
+}

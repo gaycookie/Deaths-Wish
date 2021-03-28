@@ -37,15 +37,27 @@ The entire changelog can be viewed on this [page](CHANGELOG.md)
 
 ## Contributors
 ### Translations
-- English by myself (v1.3.6)
-- Dutch by myself (v1.3.6)
-- Polish by [MrRubberDucky](https://github.com/MrRubberDucky) (v1.3.6)
-- French by Fr0zka (v1.3.6)
-- German by [Apace100](https://github.com/apace100) (v1.1.0)
-- Spanish by [Chronosacaria](https://github.com/chronosacaria) (1.3.6)
 
-The versions behind will tell you when the translation file was updated.  
-If you want to contribute to the translations then check out this [page](https://github.com/gaycookie/Deaths-Wish/wiki/Contribution#language-contribution)
+| Released | Updated   | Language    | Author               | Version |
+| :------: | :-------: | ----------- | -------------------- | ------- |
+|   ✅    |     ✅    | English     | GayCookie            | v1.3.6  |
+|   ✅    |     ✅    | Dutch       | GayCookie            | v1.3.6  |
+|   ✅    |     ✅    | Polish      | [MrRubberDucky]      | v1.3.6  |
+|   ✅    |     ✅    | French      | Fr0zka               | v1.3.6  |
+|   ✅    |     ❌    | German      | [Apace100]           | v1.1.0  |
+|   ✅    |     ✅    | Spanish     | [Chronosacaria]      | v1.3.6  |
+|   ❌    |     ✅    | Italian     | [Chronosacaria]      | v1.3.6  |
+|   ❌    |     ✅    | Mandarin    | [Chronosacaria]      | v1.3.6  |
+
+<!-- Copy Paste :: ❌ ✅ -->
+<!-- Add your own Github profile down below -->
+[MrRubberDucky]: https://github.com/MrRubberDucky
+[Apace100]: https://github.com/apace100
+[Chronosacaria]: https://github.com/chronosacaria
+
+***Release**: If the translation file has been included with the latest release including the last update.*  
+***Updated**: If the translation file is up to date with the latest update/release.*  
+*Examples and information on how to translate/contribute can be found [here](https://github.com/gaycookie/Deaths-Wish/wiki/Contribution#language-contribution)*  
 
 ---
 
