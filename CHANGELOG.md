@@ -1,5 +1,13 @@
 ## Changelog
-### 1.3.6 (latest)
+### 1.4.0 (latest)
+#### Changes
+- Replaced SimpleConfig with AutoConfig using Jankson (JSON5).
+- Enchantments should be able to be disabled now.
+- Crashes related to Adventure Pack should be solved by a previous update.
+- Translations that were not included in the previous update are now.
+- Still did not learn how to write proper changelogs! 😂
+
+### 1.3.6
 #### Added
 - Functionalities to `Keep Inventory` enchantment.
 - More configuration options.  

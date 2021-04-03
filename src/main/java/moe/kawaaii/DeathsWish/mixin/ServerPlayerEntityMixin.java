@@ -22,7 +22,7 @@ public class ServerPlayerEntityMixin {
 
     @Inject(at = @At(value = "HEAD"), method = "copyFrom", cancellable = true)
     public void copyFrom(ServerPlayerEntity oldPlayer, boolean alive, CallbackInfo ci) {
-        if (MainClass.CONFIG.getOrDefault("keep_inventory_enabled", true)) {
+        if (MainClass.CONFIG.enchantments.keep_inventory.enabled) {
             if (!alive) {
                 if (!((ServerPlayerEntity) (Object) this).world.getGameRules().getBoolean(GameRules.KEEP_INVENTORY)) {
                     if (((IPlayerEntity) oldPlayer).getKeepInventory()) {

@@ -16,15 +16,8 @@ public class EnchantmentMixin {
         Enchantment enchantment = ((Enchantment) (Object) this);
         Item item = stack.getItem();
 
-        if (MainClass.CONFIG.getOrDefault("keep_inventory_enabled", true)) {
-            if (enchantment == MainClass.KEEP_INVENTORY) {
-                if (item == MainClass.TOTEM_OF_DYING) {
-                    cir.setReturnValue(true);
-                }
-            }
+        if (MainClass.CONFIG.enchantments.keep_inventory.enabled) {
+            if (item == MainClass.TOTEM_OF_DYING) cir.setReturnValue(true);
         }
-
-
     }
-
 }

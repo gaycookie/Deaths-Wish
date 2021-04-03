@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class PlayerInventoryMixin {
     @Inject(at = @At(value = "HEAD"), method = "dropAll", cancellable = true)
     public void keepInventoryInjection(CallbackInfo ci) {
-        if (MainClass.CONFIG.getOrDefault("keep_inventory_enabled", true)) {
+        if (MainClass.CONFIG.enchantments.keep_inventory.enabled) {
             if (((IPlayerEntity) (((PlayerInventory) (Object) this).player)).getKeepInventory()) {
                 ci.cancel();
             }

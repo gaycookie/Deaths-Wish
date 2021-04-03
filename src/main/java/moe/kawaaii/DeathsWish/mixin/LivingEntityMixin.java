@@ -29,7 +29,7 @@ public abstract class LivingEntityMixin {
     @Inject(at = @At(value = "TAIL"), method = "onDeath", cancellable = true)
     public void soulAbsorbInjection(DamageSource source, CallbackInfo ci) {
 
-        if (MainClass.CONFIG.getOrDefault("soul_absorb_enabled", true)) {
+        if (MainClass.CONFIG.enchantments.soul_absorb.enabled) {
             LivingEntity livingEntity = ((LivingEntity) (Object) this);
             Entity attackerEntity = source.getAttacker();
 
@@ -52,7 +52,7 @@ public abstract class LivingEntityMixin {
                     if (livingEntity instanceof PassiveEntity) return;
 
                     /* Generated a random number between 1 and 100 and if its (default 50) or lower it continues */
-                    if (!((new Random().nextInt(100) + 1) <= MainClass.CONFIG.getOrDefault("soul_absorber_chance", 5))) return;
+                    if (!((new Random().nextInt(100) + 1) <= MainClass.CONFIG.enchantments.soul_absorb.chance)) return;
 
                     /* Gets the first 'Block of Undying' that has damage, if it found one it will restore 1 charge to it */
                     PlayerInventory inventory = playerEntity.inventory;
