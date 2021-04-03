@@ -40,14 +40,14 @@ The entire changelog can be viewed on this [page](CHANGELOG.md)
 
 | Released | Updated   | Language    | Author               | Version |
 | :------: | :-------: | ----------- | -------------------- | ------- |
-|   ✅    |     ✅    | English     | GayCookie            | v1.3.6  |
-|   ✅    |     ✅    | Dutch       | GayCookie            | v1.3.6  |
-|   ✅    |     ✅    | Polish      | [MrRubberDucky]      | v1.3.6  |
-|   ✅    |     ✅    | French      | Fr0zka               | v1.3.6  |
+|   ✅    |     ✅    | English     | GayCookie            | v1.4.0  |
+|   ✅    |     ✅    | Dutch       | GayCookie            | v1.4.0  |
+|   ✅    |     ✅    | Polish      | [MrRubberDucky]      | v1.4.0  |
+|   ✅    |     ✅    | French      | Fr0zka               | v1.4.0  |
 |   ✅    |     ❌    | German      | [Apace100]           | v1.1.0  |
-|   ✅    |     ✅    | Spanish     | [Chronosacaria]      | v1.3.6  |
-|   ❌    |     ✅    | Italian     | [Chronosacaria]      | v1.3.6  |
-|   ❌    |     ✅    | Mandarin    | [Chronosacaria]      | v1.3.6  |
+|   ✅    |     ✅    | Spanish     | [Chronosacaria]      | v1.4.0  |
+|   ✅    |     ✅    | Italian     | [Chronosacaria]      | v1.4.0  |
+|   ✅    |     ✅    | Mandarin    | [Chronosacaria]      | v1.4.0  |
 
 <!-- Copy Paste :: ❌ ✅ -->
 <!-- Add your own Github profile down below -->
